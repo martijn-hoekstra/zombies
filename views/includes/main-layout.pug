@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+    block head
+        head
+            meta(charset='utf-8')
+            meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+            title #{pageTitle} - Final Moments
+            link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+            link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+            link(rel='stylesheet', href='/css/zombies.css')
+    body
+        block navbar
+            nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+                .navbar-collapse.collapse.w-100.order-1.order-md-0.dual-collapse2
+                    ul.navbar-nav.mr-auto
+                        li(class=(path === '/dashboard' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/dashboard') Dashboard
+                        li(class=(path === '/survivors' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/survivors') Survivors
+                        li(class=(path === '/inventory' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/inventory') Inventory
+                        li(class=(path === '/safehouse' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/safehouse') Safehouse
+                        li(class=(path === '/shop' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/shop') Shop
+                        li(class=(path === '/missions' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/missions') Missions
+                        li(class=(path === '/explore' ? 'nav-item active' : 'nav-item'))
+                            a.nav-link(href='/explore') Explore
+                .mx-auto.order-0
+                    a.navbar-brand.mx-auto(href='#') Final Moments
+                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='.dual-collapse2')
+                        span.navbar-toggler-icon
+                .navbar-collapse.collapse.w-100.order-3.dual-collapse2
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href='#') News
+                        li.nav-item
+                            a.nav-link(href='#') Account
+                        li.nav-item
+                            a.nav-link(href='#') Logout
+        block content
+        block footer
+            script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+            script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')

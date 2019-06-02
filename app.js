@@ -16,7 +16,7 @@ app.use('/admin', adminRoutes);
 app.use(gameRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).render('404');
+    res.status(404).render('404', {pageTitle: 'Page not found'});
 });
 
 app.listen(3000);
