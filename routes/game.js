@@ -1,39 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-// Test data
-const survivors = [
-    {name: 'Marty', activity: 'Repairing safehouse'},
-    {name: 'Josh', activity: 'Exploring north'},
-    {name: 'Lucia', activity: 'Cooking'}
-];
+// import controllers
+const dashboardController = require('../controllers/dashboard');
+const survivorsController = require('../controllers/survivors');
+const inventoryController = require('../controllers/inventory');
+const safehouseController = require('../controllers/safehouse');
+const shopController = require('../controllers/shop');
+const missionsController = require('../controllers/missions');
+const exploreController = require('../controllers/explore');
 
-router.get('/survivors', (req, res, next) => {
-    res.render('survivors', {pageTitle: 'Survivors', path: '/survivors', survivors: survivors});
-});
-
-router.get('/inventory', (req, res, next) => {
-    res.render('inventory', {pageTitle: 'Inventory', path: '/inventory', survivors: survivors});
-});
-
-router.get('/safehouse', (req, res, next) => {
-    res.render('safehouse', {pageTitle: 'Safehouse', path: '/safehouse', survivors: survivors});
-});
-
-router.get('/shop', (req, res, next) => {
-    res.render('shop', {pageTitle: 'Shop', path: '/shop', survivors: survivors});
-});
-
-router.get('/missions', (req, res, next) => {
-    res.render('missions', {pageTitle: 'Missions', path: '/missions', survivors: survivors});
-});
-
-router.get('/explore', (req, res, next) => {
-    res.render('explore', {pageTitle: 'Explore', path: '/explore', survivors: survivors});
-});
-
-router.use('/dashboard', (req, res, next) => {
-    res.render('dashboard', {pageTitle: 'Dashboard', path: '/dashboard', survivors: survivors});
-});
+router.use('/dashboard', dashboardController.getDashboard);
+router.get('/survivors', survivorsController.getSurvivors);
+router.get('/inventory', inventoryController.getInventory);
+router.get('/safehouse', safehouseController.getSafehouse);
+router.get('/shop', shopController.getShop);
+router.get('/missions', missionsController.getMissions);
+router.get('/explore', exploreController.getExplore);
 
 module.exports = router;
