@@ -2,4 +2,122 @@ extends includes/main-layout.pug
 
 block content
     .container
-        h1 #{pageTitle}
+        .row
+            .col-md-8
+                .card
+                    h5.card-header {Survivor name} overview
+                    .card-body
+                        #survivor-overview
+                            .row
+                                .col-md-4
+                                    svg.bd-placeholder-img(width='100%', height='100%', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                        title Placeholder
+                                        rect(width='100%', height='100%', fill='#868e96')
+                                        text(x='27%', y='50%', fill='#dee2e6', dy='.3em') Survivor avatar
+                                .col-md-8
+                                    .row
+                                        .col-md-6
+                                            .stats
+                                                ul.list-unstyled
+                                                    li.stat Health
+                                                    li.stat Happiness
+                                                    li.stat Sickness
+                                                    li.stat Hunger
+                                                    li.stat Fatique
+                                        .col-md-6
+                                            .stats
+                                                ul.list-unstyled
+                                                    li.stat Strength
+                                                    li.stat Constitution
+                                                    li.stat Agility
+                                                    li.stat Stealth
+                                                    li.stat Intelligence
+                            .row(style='margin-top:15px;')
+                                .col-md-12
+                                    .card.border-light
+                                        h5.card-header Abilities
+                                        .card-body(style='padding-left:0; padding-right:0;')
+                                            ul.list-group.list-group-horizontal.list-unstyled.text-center
+                                                li.list-group-item.ability
+                                                    .ability-img
+                                                        svg.bd-placeholder-img.mr-3(width='123', height='123', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                                            title Placeholder
+                                                            rect(width='100%', height='100%', fill='#868e96')
+                                                    h6.ability-name Ability
+                                                li.list-group-item
+                                                    .ability-img
+                                                        svg.bd-placeholder-img.mr-3(width='123', height='123', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                                            title Placeholder
+                                                            rect(width='100%', height='100%', fill='#868e96')
+                                                    h6.ability-name Ability
+                                                li.list-group-item
+                                                    .ability-img
+                                                        svg.bd-placeholder-img.mr-3(width='123', height='123', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                                            title Placeholder
+                                                            rect(width='100%', height='100%', fill='#868e96')
+                                                    h6.ability-name Ability
+                                                li.list-group-item
+                                                    .ability-img
+                                                        svg.bd-placeholder-img.mr-3(width='123', height='123', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                                            title Placeholder
+                                                            rect(width='100%', height='100%', fill='#868e96')
+                                                    h6.ability-name Ability
+                                                li.list-group-item
+                                                    .ability-img
+                                                        svg.bd-placeholder-img.mr-3(width='123', height='123', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                                            title Placeholder
+                                                            rect(width='100%', height='100%', fill='#868e96')
+                                                    h6.ability-name Ability
+            .col-md-4
+                #stats.card
+                    .card-body
+                        .row
+                            .col-sm-4
+                                i.material-icons restaurant
+                                .progress
+                                    .progress-bar.bg-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                            .col-sm-4
+                                i.material-icons local_drink
+                                .progress
+                                    .progress-bar.bg-info(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                            .col-sm-4
+                                i.material-icons monetization_on
+                                .progress
+                                    .progress-bar.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                        .row(style='margin-top:10px;')
+                            .col-sm-4
+                                i.material-icons stars
+                                .progress
+                                    .progress-bar.bg-success(role='progressbar', style='width: 78%', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100')
+                            .col-sm-4
+                                i.material-icons supervisor_account
+                                .progress
+                                    .progress-bar.bg-info(role='progressbar', style='width: 20%', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100')
+                            .col-sm-4
+                                i.material-icons home
+                                .progress
+                                    .progress-bar.bg-warning(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+                #survivors-compact.card
+                    h5.card-header Survivors
+                    .card-body
+                        ul.list-unstyled
+                            li.media
+                                svg.bd-placeholder-img.mr-3(width='65', height='65', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                .media-body
+                                    h5.mt-0.mb-1 Player
+                                    .progress.progress-sm
+                                        .progress-bar.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                            li.media.my-4
+                                svg.bd-placeholder-img.mr-3(width='65', height='65', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                .media-body
+                                    h5.mt-0.mb-1 Survivor #1
+                            li.media
+                                svg.bd-placeholder-img.mr-3(width='65', height='65', xmlns='http://www.w3.org/2000/svg', preserveAspectRatio='xMidYMid slice', focusable='false', role='img', aria-label='Placeholder: Image')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                .media-body
+                                    h5.mt-0.mb-1 Survivor #2

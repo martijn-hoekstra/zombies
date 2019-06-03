@@ -30,14 +30,8 @@ h5.card-header {
   border-color:#edefd7;
   font-weight:bold;
 }
-button {
-  background-color: #0b3d1d;
-  border: 2px #07ae43 solid;
-  padding: 10px 15px;
-  color: #07ae43;
-  text-transform: uppercase;
-  font-weight: bold;
-}
 
 #stats .material-icons { float:left; }
 #stats .progress { float:right; width:110px; margin-top:5px; }
+
+.progress-sm { height:.5rem; }
